@@ -1,0 +1,4 @@
+[ubuntu-server]
+192.168.56.101 apache_package=apache2
+[centos-server]
+192.168.56.104 apache_package=httpd

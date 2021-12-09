@@ -2,14 +2,14 @@
 # tasks file for dhcpd
 - name: install dhcpd(Ubuntu)
   apt:
-   name: dhcp
+   name: isc-dhcp-server
    state: latest
    update_cache: yes
   when: ansible_distribution == "Ubuntu"
 
 - name: install dhcpd(CentOS)
   dnf:
-   name: dhcp
+   name: dhcp-server
    state: latest
    update_cache: yes
   when: ansible_distribution == "CentOS"

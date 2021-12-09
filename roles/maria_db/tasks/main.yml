@@ -3,7 +3,7 @@
 - name: install mariadb server package(CentOS)
   tags: centos, db, mariadb
   dnf:
-   name: mariadb
+   name: mariadb-server
    state: latest
   when: ansible_distribution == "CentOS"
 
@@ -12,4 +12,4 @@
   apt:
    name: mariadb-server
    state: latest
-   when: ansible_distrubution == "Ubuntu"
+  when: ansible_distribution == "Ubuntu"
