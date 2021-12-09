@@ -1,15 +1,15 @@
 ---
-# tasks file for dhcpd
-- name: install dhcpd(Ubuntu)
+# tasks file for httpd
+- name: install httpd for Ubuntu
   apt:
-   name: dhcp
+   name: httpd
    state: latest
    update_cache: yes
   when: ansible_distribution == "Ubuntu"
 
-- name: install dhcpd(CentOS)
+- name: install httpd for CentOS
   dnf:
-   name: dhcp
+   name: httpd
    state: latest
    update_cache: yes
   when: ansible_distribution == "CentOS"

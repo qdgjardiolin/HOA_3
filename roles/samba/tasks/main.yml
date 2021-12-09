@@ -1,15 +1,16 @@
 ---
-# tasks file for dhcpd
-- name: install dhcpd(Ubuntu)
+# tasks file for samba
+- name: install samba on Ubuntu
   apt:
-   name: dhcp
+   name: samba
    state: latest
    update_cache: yes
   when: ansible_distribution == "Ubuntu"
 
-- name: install dhcpd(CentOS)
+- name: install samba on CentOS
   dnf:
-   name: dhcp
+   name: samba samba-client
    state: latest
    update_cache: yes
   when: ansible_distribution == "CentOS"
+

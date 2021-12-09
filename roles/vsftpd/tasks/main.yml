@@ -1,15 +1,15 @@
 ---
-# tasks file for dhcpd
-- name: install dhcpd(Ubuntu)
+# tasks file for vsftpd
+- name: install vsftpd for Ubuntu
   apt:
-   name: dhcp
+   name: vsftpd
    state: latest
    update_cache: yes
   when: ansible_distribution == "Ubuntu"
 
-- name: install dhcpd(CentOS)
+- name: install vsftpd for CentOS
   dnf:
-   name: dhcp
+   name: vsftpd
    state: latest
    update_cache: yes
   when: ansible_distribution == "CentOS"
